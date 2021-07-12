@@ -11,4 +11,16 @@
 |
 */
 
-Route::get('/','PostsController@index' )->name('top');
+Route::get('/','PostsController@index')->name('top');
+
+
+// Route::resource('posts','PostsController',['only'=>['create','store','show','edit','update','destroy']]);
+Route::get('/create', 'PostsController@create')->name('posts.create');
+ Route::post('/store', 'PostsController@store')->name('posts.store');
+ Route::get('/show/{post}', 'PostsController@show')->name('posts.show');
+Route::get('/edit/{post}', 'PostsController@edit')->name('posts.edit');
+Route::put('/update/{post}', 'PostsController@update')->name('posts.update');
+Route::get('/destroy/{post}', 'PostsController@destroy')->name('posts.destroy');
+
+
+
