@@ -28,21 +28,19 @@
             　    </div> 
             　</div> 
             　<div>
-            　  <label for="body">
-                  本文
-            　</label>
-            　  <textarea
-            　        id="body"
-            　   name="body"
-            　   class="form-control"
-            　   rows="4"
-            　  >{{old('body')}}
-            　  </textarea>
-  
-                  <div class="text-dange">
-            　     {{$errors->first('body')}}
-            　    </div> 
-            　</div> 
+                  <label for="body">
+                      本文
+                  </label>
+                  
+                  <textarea
+                      id="body"
+                      name="body"
+                      class="form-control"
+                      rows="4"
+                  >{{old('body')}}</textarea>
+                 <div class="text-danger">
+                   {{$errors->first('body')}}
+                 </div> 
             　
             　<div class="mt-5">
             　<a class="btn btn-secondary" href="{{route('top')}}">

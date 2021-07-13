@@ -8,7 +8,7 @@
           投稿の編集
       </h1>
       
-      <form method="POST" action="{{route('posts.update',['post'=>$post])}}">
+      <form method="POST"action="{{route('posts.update',['post'=>$post])}}">
           {{csrf_field()}}
           {{method_field('PUT')}}
           
@@ -26,16 +26,18 @@
             　    >
             　</div> 
             　<div>
-            　  <label for="body">
-                  本文
-            　</label>
-            　  <textarea
-            　        id"=body"
-            　   name="body"
-            　   class="form-control"
-            　   rows="4"
-            　  > {{$post->title}}</textarea>
-            　</div> 
+                  <label for="body">
+                      本文
+                  </label>
+                  
+                  <textarea
+                      id="body"
+                      name="body"
+                      class="form-control"
+                      rows="4"
+                  >{{$post->body}}</textarea>
+                  
+              </div>
             　
             　<div class="mt-5">
             　<a class="btn btn-secondary" href="{{route('posts.show',['post'=>$post])}}">
