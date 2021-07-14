@@ -41,7 +41,7 @@
                  <div class="text-danger">
                    {{$errors->first('body')}}
                  </div> 
-            　
+            　</div>
             　<div class="mt-5">
             　<a class="btn btn-secondary" href="{{route('top')}}">
             　   キャンセル 
